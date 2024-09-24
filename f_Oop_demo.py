@@ -1,4 +1,4 @@
-from oop_obj import User, Student, Teacher, Set_Teacher,Stud_fac
+from g_oop_obj import User, Student, Teacher, Set_Teacher,Stud_fac
 
 user1 = User("naveen", "1989")
 user2 = User("Deva", 2003)

@@ -188,6 +188,8 @@ print(s1)
 print(s3)
 print("\n----------------2d list copy formats-----------------\n")
 '''
+
+'''
 skill = ["c", "py", "iot", "cloud", "web"]
 #dev = skill #  normal copy would  reflect changes
 #dev= skill.copy()  #  skill[::] #  shallow copy changes would not not reflect in dev
@@ -199,7 +201,6 @@ nav = ["naveen", 22, "cse"]
 mad = ["madhu", 21, "it"]
 clg = [nav, mad, dev]
 print(clg[2][2])
-'''
 print("\n----------------tuples-----------------\n")
 '''
 tup = tuple(map(int,input().split(" ")))
@@ -232,6 +233,8 @@ for i in dist.values():
 '''
 # list of dict
 '''
+
+'''
 user = []
 dist1 = {'name': 'naveen', 'age': 21}
 # list in dict
@@ -241,7 +244,6 @@ dist2 = {'name': 'madhu', 'age': 21}
 user.append(dist2)
 print(user)
 print(dist1['skill'][2])
-'''
 print("\n----------------set-----------------\n")
 '''
 # set
@@ -254,6 +256,8 @@ print(m)
 
 print("\n----------------string formatting-----------------\n")
 '''
+
+'''
 name = 'Naveen'
 like1 = 'apple'
 like2 = 'banana'
@@ -263,7 +267,6 @@ print("*****{}*****".format("welcome"))
 print("*****{msg:<20}*****".format(msg="welcome"))
 print("*****{:>20}*****".format("welcome"))
 print("*****{:^20}*****".format("welcome"))
-'''
 print("\n---------------num formatting-----------------\n")
 '''
 pi = 3.14567
@@ -295,22 +298,22 @@ print(p)
 
 '''
 print("\n----------------scope of variable-----------------\n")
-# num = 10  # global var
-# def mad(name):  # local var
-#     print("ur name"+name)
-#     print(num)
-# mad("madhu")
+num = 10  # global var
+def mad(name):  # local var
+    print("ur name"+name)
+    print(num)
+mad("madhu")
 print("\n----------------variable argument-----------------\n")
 
 #
-# def sum(*args):  # now we can send multiple  arguments *is the matter here it brings the tuple
-#     s = 0
-#     for i in args:
-#         s += i
-#     return s
-#
-#
-# print(sum(25, 25, 25))
+def sum(*args):  # now we can send multiple  arguments *is the matter here it brings the tuple
+    s = 0
+    for i in args:
+        s += i
+    return s
+
+
+print(sum(25, 25, 25))
 print("\n----------------keyword args variable-----------------\n")
 
 def addr_details(**kvargs):
@@ -324,25 +327,25 @@ print("\n----------------default args-----------------\n")
 #     print("hello"+fname+lname)
 # dfv("naveen")  #when value doesn't get means it will use default val
 print("\n----------------passing list-----------------\n")
-# def print_list(ll):
-#     for i in ll:
-#         i=i.title()
-#         print(i)
-# name = ["my","name","is","billa"]
-# print_list(name)
-# print(name)
+def print_list(ll):
+    for i in ll:
+        i=i.title()
+        print(i)
+name = ["my","name","is","billa"]
+print_list(name)
+print(name)
 
 print("\n----------------copy concept-----------------\n")
 
-# def print_list(ll):
-#     for i in range(0,len(ll)):
-#         ll[i]=ll[i].title()
-#         print(ll[i],end=" ")
-# name = ["my","name","is","billa"]
-# print_list(name[:])  #it will not copy it will create another list
-# print(name)
-# print_list(name)   #it will copies the original list ref
-# print(name)
+def print_list(ll):
+    for i in range(0,len(ll)):
+        ll[i]=ll[i].title()
+        print(ll[i],end=" ")
+name = ["my","name","is","billa"]
+print_list(name[:])  #it will not copy it will create another list
+print(name)
+print_list(name)   #it will copies the original list ref
+print(name)
 print("\n----------------returning dictionary-----------------\n")
 # def user_Info():
 #     user={"name":"naveen","age":21}
@@ -399,7 +402,7 @@ print("\n----------------file opt-----------------\n")
 print("\n----------------walrus Operator-----------------\n")
 #syntax := is used to assign and print
 list_num = list()
-while (i := input()) !='z':
+while (i := input()) != 'z':
     list_num.append(int(i))
 print(list_num)
 print("\n----------------Higher order funct-----------------\n")
